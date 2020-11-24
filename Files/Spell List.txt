@@ -1,0 +1,3 @@
+ Rank           Element              Name                  Damage
+  0              #Fire            !Candle Flame                0
+   
