@@ -1,3 +1,10 @@
- Rank           Element              Name                  Damage
-  0              #Fire            !Candle Flame                0
-   
+ Rank           Element               Name                  Damage
+  0              Fire             Candle Flame               0
+  0              Ice                 Chill                   0
+  0              Water              Bubble                   0
+  0              Wind                Gust                    0
+  0              Earth             Splinter                  5
+  1              Fire                Burst                   
+  1              Ice                 Freeze                  
+  
+    
