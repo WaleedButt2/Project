@@ -5,6 +5,9 @@
         "algorithm": "cpp",
         "deque": "cpp",
         "vector": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "string_view": "cpp",
+        "iosfwd": "cpp",
+        "fstream": "cpp"
     }
 }

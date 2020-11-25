@@ -21,8 +21,6 @@ Ice::Ice(){
             rank[i]=str[0]-'0';
             line =line.substr(line.find("Ice")+3,line.length());
             line.erase(remove(line.begin(), line.end(), ' '), line.end()); 
-            Status[i]=stoi(line.substr((line.length()-2),line.length()));
-            line.pop_back();line.pop_back();
             Mana_Cost[i]=stoi(line.substr((line.length()-2),line.length()));
             line.pop_back();line.pop_back();
             Turn[i]=stoi(line.substr((line.length()-2),line.length()));

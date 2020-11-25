@@ -13,4 +13,5 @@ class spell{
     int Mana_Cost[9];
     int Turn[9];
     int Status[9];
+    friend spell File(string K);
 };
