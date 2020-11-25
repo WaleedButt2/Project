@@ -1,4 +1,4 @@
-#include "../Header/Fire.h"
+#include "../../Header/Elements/Fire.h"
 #include <iostream>
 #include <fstream>
 #include <string.h>
@@ -25,6 +25,8 @@ Fire::Fire(){
             rank[i]=str[0]-'0';
             line =line.substr(line.find("Fire")+9,line.length());
             line=removeSpaces(line);
+            Status[i]=stoi(line.substr((line.length()-2),line.length()));
+            line.pop_back();line.pop_back();
             Mana_Cost[i]=stoi(line.substr((line.length()-2),line.length()));
             line.pop_back();line.pop_back();
             Turn[i]=stoi(line.substr((line.length()-2),line.length()));
@@ -34,7 +36,7 @@ Fire::Fire(){
             damage[i]=stoi(line.substr((line.length()-2),line.length()));
             line.pop_back();line.pop_back();
             Name[i]=line;
-            //cout<<rank[i]<<' '<<Name[i]<<' '<<damage[i]<<' '<<DPS[i]<<' '<<Turn[i]<<' '<<Mana_Cost[i]<<endl;
+            //cout<<rank[i]<<' '<<Name[i]<<' '<<damage[i]<<' '<<DPS[i]<<' '<<Turn[i]<<' '<<Mana_Cost[i]<<' '<<Status[i]<<endl;
             i++;
         }
         delete str;

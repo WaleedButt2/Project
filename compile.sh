@@ -1,1 +1,1 @@
-g++ main.cpp ./CPP/Fire.cpp 
+g++ main.cpp ./CPP/Elements/Fire.cpp ./CPP/Elements/Earth.cpp ./CPP/Elements/Ice.cpp ./CPP/Elements/Wind.cpp ./CPP/Elements/Lightning.cpp ./CPP/Elements/Water.cpp

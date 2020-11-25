@@ -12,4 +12,5 @@ class spell{
     int DPS[9];
     int Mana_Cost[9];
     int Turn[9];
+    int Status[9];
 };
