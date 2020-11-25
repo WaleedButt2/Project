@@ -1,12 +1,23 @@
- Rank           Element             Name                  Damage
-  0              Fire             Candle Flame              0                      
-  0              Ice                Chill                   0                      
-  0              Water              Bubble                  0                      
-  0              Wind               Gust                    0                      
-  0              Earth             Splinter                 10                      
-  1              Fire               Burst                   20                     
-  1              Ice                Freeze                  0                      
-  1              Water              Splash                  5
-  1              Wind               Swirl                   15
-  1              Earth              Earth Bullet            35 
-    
+Rank           Element             Name                  Damage                  DPS               Turn            Mana_Cost
+0              Fire               Candle Flame            00                     10                 01                 10
+0              Ice                Chill                   00                     05                 02                 05
+0              Water              Bubble                  00                     10                 02                 15
+0              Wind               Gust                    05                     00                 00                 05
+0              Earth              Splinter                10                     00                 00                 15                 
+1              Fire               Burst                   20                     00                 00                 25                 
+1              Ice                Freeze                  00                     -1                 00                 30                 
+1              Water              Splash                  00                     00                 00                 500                 
+1              Wind               Swirl                   05                     15                 02                 35
+1              Earth              Earth Bullet            35                     10                 02                 50
+1              Lightning          Shock                   10                     -2                 00                 40
+2              Fire               Scorched Earth          05                     10                 05                 50
+2              Ice                Ice Shard               35                     25                 01                 60
+2              Water              Water Jet               40                     00                 00                 55
+2              Earth              Boulder Smash           55                     00                 00                 65
+2              Lightning          Spark                   40                     00                 00                 50                 
+3              Fire               Fire Bolt               80                     10                 02                 85
+3              Ice                Iceicle Burst           30                     30                 02                 80
+3              Wind               Cut                     75                     00                 00                 70
+3              Water              Rain                    15                     15                 05                 60
+3              Lightning          Lightning               65                     -2                 00                 85
+3              Earth              Mud Strike              45                     15                 03                 75
