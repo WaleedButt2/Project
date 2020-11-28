@@ -10,6 +10,8 @@ int main(){
     string s="HydroBullets";
     Player x;
     x.learn_spell(s);
+    x.learn_spell("CandleFlame");
+    x.learn_spell("HeraldOfTheForgottenSky");
     x.Use_spell();
     //cout<<x.get_current_hp()<<endl;
     //x.Damage_inflicted(s);

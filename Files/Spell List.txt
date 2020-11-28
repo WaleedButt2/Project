@@ -51,7 +51,7 @@ Rank           Element             Name                  Damage                 
 8              Lightning          Paralyze                0000                     000                000                 1400                   00
 8              Ice                Ice Age                 0000                     500                003                 1300                   00
 8              Fire            The Legendary Sayain       0000                     000                000                 1500                   05
-9              Fire            Molten Planets Core        2000                     800                002                 2000                   00
+9              Fire        Burning Sun: SuperNova         2000                     800                002                 2000                   00
 9              Ice              Absoloute Zero            0000                     999                004                 2400                   01
 9              Earth        Pulse Of A Neutron Star       4000                     000                000                 2700                   00
 9              Water       Water Planet Raging Waves      2500                     500                002                 2200                   00

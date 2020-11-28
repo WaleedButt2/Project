@@ -55,7 +55,9 @@ spell Player::Use_spell(){
     show_avaliable_spells();
     cin>>a;
     x=search_spell(a);
-
+    if(a=-1) x.Tag=-1;                    //-1 one means no spell has been used
+    //cout<<x.Name<<endl;
+    return x;
 }
 int Player::get_current_hp()
 {

@@ -31,4 +31,5 @@ public:
     spell Use_spell();
     int get_current_hp();
     void levelup();
+    void TickTock();
 };
