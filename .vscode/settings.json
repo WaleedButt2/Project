@@ -8,6 +8,7 @@
         "*.tcc": "cpp",
         "string_view": "cpp",
         "iosfwd": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "ostream": "cpp"
     }
 }

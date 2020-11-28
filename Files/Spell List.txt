@@ -1,23 +1,59 @@
-Rank           Element             Name                  Damage                  DPS               Turn            Mana_Cost              Status
-0              Fire               Candle Flame            00                     10                 01                 10                   00
-0              Ice                Chill                   00                     05                 02                 05                   00
-0              Water              Bubble                  00                     10                 02                 15                   00
-0              Wind               Gust                    05                     00                 00                 05                   00
-0              Earth              Splinter                10                     00                 00                 15                   00
-1              Fire               Burst                   20                     00                 00                 25                   00
-1              Ice                Freeze                  00                     00                 00                 30                   01
-1              Water              Splash                  00                     00                 00                 500                  99
-1              Wind               Swirl                   05                     15                 02                 35                   00
-1              Earth              Earth Bullet            35                     10                 02                 50                   00
-1              Lightning          Shock                   10                     00                 00                 40                   02
-2              Fire               Scorched Floor          05                     10                 05                 50                   00
-2              Ice                Ice Shard               35                     25                 01                 60                   00
-2              Water              Water Jet               40                     00                 00                 55                   00
-2              Earth              Boulder Smash           55                     00                 00                 65                   00
-2              Lightning          Spark                   40                     00                 00                 50                   00
-3              Fire               Fire Bolt               80                     10                 02                 85                   00
-3              Ice                Iceicle Burst           30                     30                 02                 80                   00
-3              Wind               Cut                     75                     00                 00                 70                   00
-3              Water              Rain                    15                     15                 05                 60                   00
-3              Lightning          Lightning               65                     00                 00                 85                   02
-3              Earth              Mud Strike              45                     15                 03                 75                   00
+Rank           Element             Name                  Damage                   DPS               Turn              Mana_Cost              Status
+0              Fire               Candle Flame            0000                     010                001                 0010                   00
+0              Ice                Chill                   0000                     005                002                 0005                   00
+0              Water              Bubble                  0000                     010                002                 0015                   00
+0              Wind               Gust                    0005                     000                000                 0005                   00
+0              Earth              Splinter                0010                     000                000                 0015                   00
+1              Fire               Burst                   0020                     000                000                 0025                   00
+1              Ice                Freeze                  0000                     000                000                 0030                   01
+1              Water              Splash                  0000                     000                000                 0500                   99
+1              Wind               Swirl                   0005                     015                002                 0035                   00
+1              Earth              Earth Bullet            0035                     010                002                 0050                   00
+1              Lightning          Shock                   0010                     000                000                 0040                   02
+2              Fire               Scorched Floor          0005                     010                005                 0050                   00
+2              Ice                Ice Shard               0035                     025                001                 0060                   00
+2              Water              Water Jet               0040                     000                000                 0055                   00
+2              Earth              Boulder Smash           0055                     000                000                 0065                   00
+2              Lightning          Spark                   0040                     000                000                 0050                   00
+3              Fire               Fire Bolt               0080                     010                002                 0085                   00
+3              Ice                Iceicle Burst           0030                     030                002                 0080                   00
+3              Wind               Cut                     0075                     000                000                 0070                   00
+3              Water              Rain                    0015                     015                005                 0060                   00
+3              Lightning          Lightning               0065                     000                000                 0085                   02
+3              Earth              Mud Strike              0045                     015                003                 0075                   00
+4              Fire               Fire Ball               0100                     060                001                 0100                   03
+4              Water              Hydro Bullets           0050                     035                003                 0090                   00
+4              Ice                Swirling Mists          0000                     045                002                 0070                   01
+4              Wind               Vacuum Blade            0140                     000                000                 0120                   00
+4              Lightning          Electric Field          0020                     030                006                 0110                   02
+4              Earth              Earth Spear             0100                     000                000                 0095                   00
+5              Fire               Sun Ray                 0080                     080                004                 0220                   00
+5              Ice                Frigid Field            0050                     100                003                 0200                   01
+5              Water              Fake Ocean              0140                     140                002                 0260                   00
+5              Wind               Fake Cyclone            0075                     075                005                 0175                   00
+5              Earth              Crumble To Dust         0400                     000                000                 0330                   00
+5              Lightning          Plasma Field            0150                     150                002                 0290                   02
+6              Lightning          Mjölnir                 0380                     050                005                 0360                   02
+6              Earth              Earthquake              0200                     100                003                 0400                   00
+6              Wind          Herald Of The Forgotten Sky  0650                     250                001                 0650                   00
+6              Water              Tusnami                 0350                     150                001                 0430                   00
+6              Ice                Ice Palace              0000                     100                006                 0350                   01
+6              Fire               Meteor                  0500                     150                001                 0550                   00
+7              Fire               Hevenly Devestation     0700                     300                001                 0700                   00
+7              Ice          True Palace Of The Ice Queen  0300                     300                005                 1000                   01
+7              Water              True Ocean Fall         0300                     300                002                 0700                   00
+7              Wind               True Cyclone            0200                     200                004                 0720                   00
+7              Lightning          Great Storm             0700                     300                001                 0780                   00
+7              Earth              Great Eruption          0900                     000                000                 0800                   00
+8              Earth              Break                   1300                     000                000                 1000                   00
+8              Water          Great Dragon Of the East    2000                     000                000                 1800                   00
+8              Wind               Dimensional Edge        1000                     200                002                 1000                   00
+8              Lightning          Paralyze                0000                     000                000                 1400                   00
+8              Ice                Ice Age                 0000                     500                003                 1300                   00
+8              Fire            The Legendary Sayain       0000                     000                000                 1500                   05
+9              Fire            Molten Planets Core        2000                     800                002                 2000                   00
+9              Ice              Absoloute Zero            0000                     999                004                 2400                   01
+9              Earth        Pulse Of A Neutron Star       4000                     000                000                 2700                   00
+9              Water       Water Planet Raging Waves      2500                     500                002                 2200                   00
+9              Wind          The Great Red Spot           3000                     800                002                 3200                   00
+9              Lightning  Gungnir Tear The World Asunder  7000                     000                000                 5000                   02
