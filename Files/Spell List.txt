@@ -4,6 +4,7 @@ Rank           Element             Name                  Damage                 
 0              Water              Bubble                  0000                     010                002                 0015                   00
 0              Wind               Gust                    0005                     000                000                 0005                   00
 0              Earth              Splinter                0010                     000                000                 0015                   00
+0              Lightning          Energise                0000                     000                000                 0030                   00
 1              Fire               Burst                   0020                     000                000                 0025                   00
 1              Ice                Freeze                  0000                     000                000                 0030                   01
 1              Water              Splash                  0000                     000                000                 0500                   99
@@ -12,6 +13,7 @@ Rank           Element             Name                  Damage                 
 1              Lightning          Shock                   0010                     000                000                 0040                   02
 2              Fire               Scorched Floor          0005                     010                005                 0050                   00
 2              Ice                Ice Shard               0035                     025                001                 0060                   00
+2              Wind               Palm Strike             0045                     000                000                 0060                   00
 2              Water              Water Jet               0040                     000                000                 0055                   00
 2              Earth              Boulder Smash           0055                     000                000                 0065                   00
 2              Lightning          Spark                   0040                     000                000                 0050                   00

@@ -16,5 +16,5 @@ public:
     int Status;
     bool avaliablility;
     int Tag;
-    friend spell *File(string K, spell *Temp,int &z);
+    friend spell *File(string K, spell *Temp, int &z);
 };

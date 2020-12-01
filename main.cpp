@@ -4,18 +4,24 @@
 #include <string>
 #include <cstdlib>
 #include <algorithm> 
-#include "Header/Player.h"
+#include "Header/Battle.h"
+#include "CPP/Story.cpp"
 using namespace std;
 int main(){
-    string s="HydroBullets";
     Player x;
-    x.learn_spell(s);
-    x.learn_spell("CandleFlame");
-    x.learn_spell("HeraldOfTheForgottenSky");
-    x.Use_spell();
+    battle(x);
+    /*Player x;
+    int y;
+    cin>>y;
     //cout<<x.get_current_hp()<<endl;
     //x.Damage_inflicted(s);
-    //cout<<x.get_current_hp()<<endl;
-    //for(int i=0;i<50;i++) x.Levelup();
-    //cout<<x.Find_New_Max_Mana()<<endl;
+    //cout<<x.get_current_hp()<<endl;49
+    x.levelup(9999);
+    cout<<"Max Mana: "<<x.Find_New_Max_Mana()<<endl;
+    cout<<"Max HP: "<<x.Find_New_Max_HP()<<endl;
+    cout<<"HP "<<x.get_current_hp()<<endl;
+    x.learn_spell(y);
+    x.Damage_inflicted(x.Use_spell().Tag);
+    cout<<"Max HP: "<<x.Find_New_Max_HP()<<endl;
+    cout<<"HP "<<x.get_current_hp()<<endl;*/
 }

@@ -1,6 +1,5 @@
 #pragma once
-#include "SpellBook.h"
-#include <string.h>
+#include "../Header/SpellBook.h"
 #include "Stats.h"
 struct Use
 {
@@ -22,14 +21,15 @@ protected:
     int Defense;
     int Max_Exp_Needed;
     int Current_Exp;
-    spell Spell_Used;
     spell Spell_Inflicted_With;
 
 public:
     Player();
-    void Damage_inflicted(int a);
+    void Take_Damage(spell a); //pass tag of spell to inflict damage
     spell Use_spell();
     int get_current_hp();
-    void levelup();
-    void TickTock();
+    void levelup(int x);
+    void Compute_DPS();
+    void Tick();
+    friend Player battle(Player x);
 };

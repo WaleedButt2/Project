@@ -10,7 +10,15 @@ Stats::Stats()
 }
 int Stats::Find_New_Max_HP()
 {
-    int HP = Constitution * 15 + Base_HP;
+    int HP;
+    if(Constitution>=130){
+        HP = Constitution * 40 + Base_HP;
+    }
+    else
+    {
+         HP = Constitution * 20 + Base_HP;
+    }
+    
     return HP;
 }
 int Stats::Find_New_HP_Regen()
@@ -22,12 +30,17 @@ int Stats::Find_New_HP_Regen()
 }
 int Stats::Find_New_Max_Mana()
 {
-    int Mana = Intelligence * 10 + Base_Mana;
+    int Mana;
+    if(Intelligence>=140)   Mana=Intelligence*55 +Base_Mana;
+    else
+    {
+        Mana = Intelligence * 25 + Base_Mana;
+    }
     return Mana;
 }
 int Stats::Find_New_Mana_Regen()
 {
-    int Mana_Regen = Intelligence * 1.25;
+    int Mana_Regen = Intelligence * 2;
     return Mana_Regen;
 }
 int Stats::Find_New_Defense()
@@ -37,7 +50,7 @@ int Stats::Find_New_Defense()
 void Stats::Levelup()
 {
     Intelligence = Intelligence + 3;
-    Constitution = Constitution + 5;
+    Constitution = Constitution + 3;
     Vitality = Vitality + 2;
     Endurance = Endurance + 3;
 }

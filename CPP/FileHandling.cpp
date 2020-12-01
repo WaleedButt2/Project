@@ -6,7 +6,7 @@
 #include <algorithm>
 #include "../Header/spell.h"
 using namespace std;
-spell *File(string K,spell* Temp, int &z)
+spell *File(string K, spell *Temp, int &z)
 {
     string line;
     char *str;
@@ -46,8 +46,8 @@ spell *File(string K,spell* Temp, int &z)
             line.pop_back();
             line.pop_back();
             Temp[i].Name = line;
-            Temp[i].avaliablility=false;
-            Temp[i].Tag=z;
+            Temp[i].avaliablility = false;
+            Temp[i].Tag = z;
             //cout<<Temp.Name[i]<<endl;
             // cout << Temp[i].rank << ' ' << Temp[i].Name << ' ' << Temp[i].damage << ' ' << Temp[i].DPS << ' ' << Temp[i].Turn << ' ' << Temp[i].Mana_Cost << ' ' << Temp[i].Status << endl;
             z++;

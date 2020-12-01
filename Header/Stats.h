@@ -3,7 +3,7 @@ class Stats
 {
 protected:
     const int Base_HP = 150;
-    const int Base_Mana = 20;
+    const int Base_Mana = 150;
     int Intelligence;
     int Constitution;
     int Vitality;
