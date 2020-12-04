@@ -1,13 +1,8 @@
-#include "../Header/Enemies.h"
+#include "../Header/Dungeon.h"
 #include "../Header/Player.h"
 #include <random>
-int randint(int Min, int Max)
-{
-    return rand() % (Max + 1 - Min) + Min;
-}
 Player battle(Player x)
 {
-    srand((unsigned)time(0));
     spell ab;
     Enemies a;
     int expected_level;
@@ -19,13 +14,13 @@ Player battle(Player x)
     else
     {
         while (!a.search_level(random))
-            random = randint(x.level - 3, x.level + 3);
+            random = 1;
         expected_level = random;
     }
     int i;
     x.Elements[0][3].avaliablility = true;
     x.Elements[2][3].avaliablility = true;
-    for (i = 0; i < 27; i++)
+    for (i = 0; i < 31; i++)
         if (expected_level == a.enemies[i].level)
             break;
     Enemy Monster = a.enemies[i];
@@ -90,5 +85,6 @@ Player battle(Player x)
 }
 void Story()
 {
-    
+    srand(time(NULL));
+    Dungeon Za_Wordo;
 }

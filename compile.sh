@@ -1,1 +1,1 @@
-g++ main.cpp  ./CPP/Player.cpp ./CPP/SpellBook.cpp ./CPP/Stats.cpp ./CPP/Enemies.cpp  ./CPP/Enemy.cpp 
+g++ main.cpp  ./CPP/Player.cpp ./CPP/SpellBook.cpp ./CPP/Stats.cpp ./CPP/Enemies.cpp  ./CPP/Enemy.cpp ./CPP/Dungeon.cpp ./CPP/Dungeon_Floor.cpp ./CPP/MonsterRoom.cpp ./CPP/ItemRoom.cpp ./CPP/BlessingRoom.cpp ./CPP/Room.cpp ./CPP/EntranceRoom.cpp ./CPP/BossRoom.cpp

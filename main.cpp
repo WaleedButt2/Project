@@ -4,12 +4,10 @@
 #include <string>
 #include <cstdlib>
 #include <algorithm> 
-#include "Header/Battle.h"
 #include "CPP/Story.cpp"
 using namespace std;
 int main(){
-    Player x;
-    battle(x);
+    Story();
     /*Player x;
     int y;
     cin>>y;

@@ -4,9 +4,7 @@
 class Enemies : public Enemy
 {
 public:
-    Enemy enemies[29];
-
-public:
+    Enemy enemies[33];
     Enemies();
     bool search_level(int x);
     friend Player battle(Player x);
