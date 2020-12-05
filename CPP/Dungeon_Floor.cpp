@@ -59,5 +59,12 @@ void Dungeon_Floor::Dungeon_Floor_Assigning_Blessings(SpellBook a, int Rank)
         Avaliable_Spells[i] = a.Elements[i][Rank];
 }
 void Dungeon_Floor::RoomShuffle(){
-    
+    int End=FinalRoom.Room_No;
+    Room x;
+    int start=0;
+    int check = randint(start,End-1);
+    //Use Register to Draw Out the Room Shuffling PLx
+    while(){
+
+    }
 }

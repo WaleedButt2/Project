@@ -7,6 +7,7 @@ protected:
     int West;
     int East;
     int Room_No;
+    bool Finished;
 public:
 Room();
 friend class Dungeon_Floor;
