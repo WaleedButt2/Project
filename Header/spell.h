@@ -14,7 +14,8 @@ public:
     int Mana_Cost;
     int Turn;
     int Status;
-    bool avaliablility;
+    bool avaliablility = false;
     int Tag;
+    bool Taken = false;
     friend spell *File(string K, spell *Temp, int &z);
 };

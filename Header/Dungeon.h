@@ -1,8 +1,9 @@
 #pragma once
 #include <stdio.h>
 #include <stdlib.h>
-#include<time.h>
+#include <time.h>
 #include "Dungeon_Floor.h"
+#include "Player.h"
 using namespace std;
 class Dungeon{
     Dungeon_Floor Dungeon_Floor_1;
@@ -19,4 +20,5 @@ class Dungeon{
     Dungeon_Floor Dungeon_End_game;
 public:
 Dungeon();
+friend void Story();
 };

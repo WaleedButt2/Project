@@ -1,90 +1,13 @@
 #include "../Header/Dungeon.h"
-#include "../Header/Player.h"
 #include <random>
-Player battle(Player x)
-{
-    spell ab;
-    Enemies a;
-    int expected_level;
-    int turn;
-    int random = 999;
-    x.level = 7;
-    if (x.level < 5)
-        expected_level = x.level;
-    else
-    {
-        while (!a.search_level(random))
-            random = 1;
-        expected_level = random;
-    }
-    int i;
-    x.Elements[0][3].avaliablility = true;
-    x.Elements[2][3].avaliablility = true;
-    for (i = 0; i < 31; i++)
-        if (expected_level == a.enemies[i].level)
-            break;
-    Enemy Monster = a.enemies[i];
-    cout << Monster.race << endl;
-    turn = Monster.turn_rate;
-    while (x.Current_HP != 0 && Monster.Current_HP != 0)
-    {
-        if (Monster.Name == "\0")
-        {
-            //cout<<Current_HP;
-            cout << "Player " << x.Current_HP << "/" << x.Max_HP << endl;
-            cout << "Monster " << Monster.Current_HP << "/" << Monster.Max_HP << endl;
-            if (--turn == 0)
-            {
-                cout << Monster.race << " attacked you \n";
-                x.Current_HP = x.Current_HP - ((1 - x.Defense / 100) * Monster.Base_Attack);
-                turn = Monster.turn_rate;
-            }
-            else
-            {
-                cout << Monster.race << " will attack in " << turn << " turns" << endl;
-            }
-            //           cout<<Current_HP;
-            //cout<<"Player "<<Max_HP<<"/"<<Current_HP<<endl;
-            Monster.Take_Damage(x.Use_spell());
-            //cout<<"Monster "<<Monster.Max_HP<<"/"<<Monster.Current_HP<<endl;
-            Monster.Tock();
-            x.Tick();
-        }
-        else
-        {
-            cout << Monster.Name << endl;
-            cout << "Monster " << Monster.Current_HP << "/" << Monster.Max_HP << endl;
-            cout << "Player " << x.Current_HP << "/" << x.Max_HP << endl
-                 << endl;
-            if (--turn == 0)
-            {
-                cout << Monster.Name << " attacked you \n";
-                ab = Monster.Boss_Attack();
-                if (ab.Tag != -1)
-                    x.Take_Damage(ab);
-                else
-                {
-                    x.Current_HP = x.Current_HP - ((1 - x.Defense / 100) * Monster.Base_Attack);
-                }
-                turn = Monster.turn_rate;
-            }
-            else
-            {
-                cout << Monster.Name << " will attack in " << turn << " turns" << endl;
-            }
-            Monster.Take_Damage(x.Use_spell());
-            Monster.Tock();
-            x.Tick();
-        }
-    }
-    if (x.Current_HP == 0)
-        cout << "You Lose " << endl;
-    else
-        cout << "You win" << endl;
-    return x;
-}
 void Story()
 {
     srand(time(NULL));
     Dungeon Za_Wordo;
+    Player Merlin;
+    cout << "Welcome To The Begiening Of Your Journey\nStep Forward now. Do not fear\nShow why you were chosen and They were not\n";
+    Merlin = Za_Wordo.Dungeon_Floor_1.Traverse_Rooms(Merlin);
+    cout << "Little One you have passed the barest of Challanges but this long road has just begun\n";
+    cout << "Keep walking forward\n";
+    Za_Wordo.Dungeon_Floor_2.Traverse_Rooms(Merlin);
 }

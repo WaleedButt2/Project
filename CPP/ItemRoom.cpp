@@ -1,18 +1,28 @@
 #include "../Header/ItemRoom.h"
-int randin(int Min, int Max)
+#include "../Header/MonsterRoom.h"
+#include "../Header/BlessingRoom.h"
+ItemRoom::ItemRoom(int count)
 {
-    return rand() % (Max + 1 - Min) + Min;
-}
-ItemRoom::ItemRoom(int count,int x){
-    count=x+count;
-    Room_No=count;
+    ID = 1;
+    Room_No = count;
     srand((unsigned)time(0));
-    int rum=randin(0,8);
-    if(rum%2==0) item="10H";
-    else if(rum%3==0)  item="10M";
-    else if(rum==1||rum==5)  item="20P";
-    else if(rum==7)  item="99P";
+    int rum = rand() % 100 + 1;
+    if (rum % 2 == 0)
+        item = "10H";
+    else if (rum % 3 == 0)
+        item = "10M";
+    else if (rum % 5 == 0)
+        item = "20P";
+    else if (rum % 23 == 0)
+        item = "99P";
+    else
+        item = "05H";
 }
-ItemRoom::ItemRoom(){
-    
+ItemRoom::ItemRoom()
+{
+}
+string ItemRoom::Get_Item()
+{
+    string x = item;
+    return x;
 }

@@ -45,9 +45,6 @@ void SpellBook::show_learnable_spells(int x)
 }
 void SpellBook::learn_spell(int x)
 {
-    cout << "Chose a spell\n";
-    show_learnable_spells(x);
-    cin >> x;
     for (int j = 0; j < 6; j++)
     {
         for (int i = 0; i < 10; i++)

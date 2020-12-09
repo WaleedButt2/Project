@@ -1,12 +1,13 @@
 #pragma once
 #include "../Header/SpellBook.h"
 #include "Stats.h"
+#include "Inventory.h"
 struct Use
 {
-    int DPS = 0;
-    int TurnRate = 0;
+    unsigned int DPS = 0;
+    unsigned int TurnRate = 0;
 };
-class Player : public Stats, public SpellBook
+class Player : public Stats, public SpellBook, public Inventory
 {
 protected:
     Use DPS_inflicted_with[10];
@@ -31,5 +32,9 @@ public:
     void levelup(int x);
     void Compute_DPS();
     void Tick();
-    friend Player battle(Player x);
+    void Set_Item(string x);
+    void Show_Items();
+    void Use_Items();
+    void operator=(Player const &x);
+    friend class Dungeon_Floor;
 };

@@ -33,14 +33,14 @@ void File_V2(Enemy *Temp)
         line.pop_back();
         line.pop_back();
         Temp[i].Max_Mana = stoi(line.substr((line.length() - 5), line.length()));
-        Temp[i].Current_Mana=Temp[i].Max_Mana;
+        Temp[i].Current_Mana = Temp[i].Max_Mana;
         line.pop_back();
         line.pop_back();
         line.pop_back();
         line.pop_back();
         line.pop_back();
         Temp[i].Max_HP = stoi(line.substr((line.length() - 5), line.length()));
-        Temp[i].Current_HP=Temp[i].Max_HP;
+        Temp[i].Current_HP = Temp[i].Max_HP;
         line.pop_back();
         line.pop_back();
         line.pop_back();

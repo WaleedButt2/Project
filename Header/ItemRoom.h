@@ -3,10 +3,12 @@
 #include <string.h>
 #include <string>
 using namespace std;
-class ItemRoom : public Room{
-    int ID=1;
-    string item;         
+class ItemRoom : public Room
+{
+    string item;
+
 public:
-ItemRoom(int count,int x);
-ItemRoom();
+    ItemRoom(int count);
+    ItemRoom();
+    string Get_Item();
 };
