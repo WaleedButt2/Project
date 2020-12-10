@@ -1,1 +1,1 @@
-Race        HP       Level    PlayerHP      PlayerLevel       Defeated
+Race            HP       Level    PlayerHP      PlayerLevel       Defeated

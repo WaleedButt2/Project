@@ -196,6 +196,7 @@ void Player::Use_Items()
                 if (Current_Mana > Max_Mana)
                     Current_Mana = Max_Mana;
                 cout << "Your Mana is restored\n";
+                Potions[i]='\0';Value[i]=0;
             }
             else if (x == 'H' && Potions[i] == 'H')
             {
@@ -207,6 +208,7 @@ void Player::Use_Items()
                 Current_HP = Current_HP + Max_HP * Value[i] / 100;
                 if (Current_HP > Max_HP)
                     Current_HP = Max_HP;
+                Potions[i]='\0';Value[i]=0;
             }
             else if ((x == 'P' || x == 'E') && Potions[i] == 'P')
             {
@@ -221,6 +223,7 @@ void Player::Use_Items()
                 Current_Mana = Current_Mana + Max_Mana * Value[i] / 100;
                 if (Current_Mana > Max_Mana)
                     Current_Mana = Max_Mana;
+                Potions[i]='\0';Value[i]=0;
             }
         }
     }

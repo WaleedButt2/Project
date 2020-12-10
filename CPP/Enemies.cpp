@@ -6,7 +6,7 @@ Enemies::Enemies()
 }
 bool Enemies::search_level(int x)
 {
-    for (int i = 0; i < 33; i++)
+    for (int i = 0; i < 34; i++)
     {
         if (enemies[i].level == x)
             return true;

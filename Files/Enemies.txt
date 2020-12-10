@@ -21,6 +21,7 @@ He Who Rose          :Minotaur            025                00600              
 NULL                 :Crazed Ogre         027                00500                 00700             00000               0100                 0000                     02
 He Who Stands        :Giant               030                00300                 02000             02000               0200                 0100                     01
 NULL                 :Basalisk            033                00600                 01500             00000               0100                 0000                     01
+Glamerous Soul       :Shining One         035                00800                 02000             60000               0500                 0000                     01
 NULL                 :Gorgon              037                00750                 02500             00000               0000                 0000                     01
 NULL                 :Wyvren              039                00800                 02500             00000               0500                 0000                     01
 Medusa               :Gorgon              040                01050                 03000             04000               0300                 0400                     01

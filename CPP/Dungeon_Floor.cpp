@@ -115,11 +115,10 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
             else
             {
                 Item = Current_Room->Get_Item();
-                cout<<Item<<endl;
                 x.Set_Item(Item);
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
-            if(x.Current_HP!=x.Max_HP&&x.Empty==true){
+            if(x.Current_HP!=x.Max_HP&&x.Empty==false){
             cout<<"Would you like to use an item?\nCurrent HP "<<x.Current_HP<<"/"<<x.Max_HP<<"\nYes or No\n";cin>>Item;
             if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();}
             Path_to_tread = Paths(Current_Room);
@@ -136,7 +135,7 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
                 if(x.Current_HP==0) return x;
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
-            if(x.Current_HP!=x.Max_HP&&x.Empty==true){
+            if(x.Current_HP!=x.Max_HP&&x.Empty==false){
             cout<<"Would you like to use an item?\nCurrent HP "<<x.Current_HP<<"/"<<x.Max_HP<<"\nYes or No\n";cin>>Item;
             if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();}            
             Path_to_tread = Paths(Current_Room);
@@ -155,7 +154,7 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
                 x.learn_spell(Blessing.Tag);
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
-            if(x.Current_HP!=x.Max_HP&&x.Empty==true){
+            if(x.Current_HP!=x.Max_HP&&x.Empty==false){
             cout<<"Would you like to use an item?\nCurrent HP "<<x.Current_HP<<"/"<<x.Max_HP<<"\nYes or No\n";cin>>Item;
             if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();}
             Path_to_tread = Paths(Current_Room);
@@ -164,6 +163,8 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
         else if (Current_Room->ID == 4)
         {
             cout << "The Final Room\nWelcome\n";
+            cout<<"Would You like to chalange "<<Current_Room->Get_Monster().Name<<endl;cin>>line;
+            if(line == "Yes" || line == "yes" || line == "YES"){ 
             if (Current_Room->called == true)
                 cout << "The Room is empty\n";
             else
@@ -179,11 +180,9 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
             {
                 return x;
             }
-            else
-            {
-                Path_to_tread = Paths(Current_Room);
-                Current_Room = Return_Room(Path_to_tread);
             }
+            Path_to_tread = Paths(Current_Room);
+            Current_Room = Return_Room(Path_to_tread);
         }
     }
     return x;
