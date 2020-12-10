@@ -2,6 +2,7 @@
 #include "../Header/SpellBook.h"
 #include "Stats.h"
 #include "Inventory.h"
+#include "../Header/Enemy.h"
 struct Use
 {
     unsigned int DPS = 0;
@@ -37,4 +38,5 @@ public:
     void Use_Items();
     void operator=(Player const &x);
     friend class Dungeon_Floor;
+    friend void File_za_wardo(Enemy Monster,Player x,bool flag);
 };

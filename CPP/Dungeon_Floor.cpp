@@ -5,6 +5,7 @@
 #endif
 #include <time.h>
 #include "../Header/Dungeon_Floor.h"
+#include "FileHandleZaWardo.cpp"
 #include <iostream>
 Dungeon_Floor::Dungeon_Floor() {}
 int randint(int Min, int Max)
@@ -118,8 +119,9 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
                 x.Set_Item(Item);
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
+            if(x.Current_HP!=x.Max_HP&&x.Empty==true){
             cout<<"Would you like to use an item?\nCurrent HP "<<x.Current_HP<<"/"<<x.Max_HP<<"\nYes or No\n";cin>>Item;
-            if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();
+            if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();}
             Path_to_tread = Paths(Current_Room);
             Current_Room = Return_Room(Path_to_tread);
         }
@@ -131,10 +133,12 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
             {
                 Monster = Current_Room->Get_Monster();
                 x = Battle(x, Monster);
+                if(x.Current_HP==0) return x;
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
+            if(x.Current_HP!=x.Max_HP&&x.Empty==true){
             cout<<"Would you like to use an item?\nCurrent HP "<<x.Current_HP<<"/"<<x.Max_HP<<"\nYes or No\n";cin>>Item;
-            if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();            
+            if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();}            
             Path_to_tread = Paths(Current_Room);
             Current_Room = Return_Room(Path_to_tread);
         }
@@ -151,8 +155,9 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
                 x.learn_spell(Blessing.Tag);
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
+            if(x.Current_HP!=x.Max_HP&&x.Empty==true){
             cout<<"Would you like to use an item?\nCurrent HP "<<x.Current_HP<<"/"<<x.Max_HP<<"\nYes or No\n";cin>>Item;
-            if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();
+            if(Item=="Yes"||Item=="yes"||Item=="YES")     x.Use_Items();}
             Path_to_tread = Paths(Current_Room);
             Current_Room = Return_Room(Path_to_tread);
         }
@@ -165,6 +170,7 @@ Player Dungeon_Floor::Traverse_Rooms(Player x)
             {
                 Monster = Current_Room->Get_Monster();
                 x = Battle(x, Monster);
+                if(x.Current_HP==0) return x;
                 Rooms[Current_Room->Room_No - 1]->called = true;
             }
             cout << "Would You like to Asscened Higher?   Yes/No\n";
@@ -369,11 +375,14 @@ Player Dungeon_Floor::Battle(Player x, Enemy Monster)
             x.Tick();
         }
     }
-    if (x.Current_HP == 0)
+    if (x.Current_HP == 0){
         cout << "You Lose " << endl;
+        File_za_wardo(Monster,x,true);
+    }
     else
     {
         cout << "You win" << endl;
+        File_za_wardo(Monster,x,false);
         x.levelup(Monster.level * 20);
     }
     for (int i = 0; i < 10; i++)

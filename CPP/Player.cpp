@@ -145,6 +145,7 @@ void Player::Set_Item(string x)
         }
     }
     cout << "Items have been put into Inventory\n";
+    Empty=false;
 }
 void Player::Show_Items()
 {
@@ -165,56 +166,62 @@ void Player::Show_Items()
     cout << M << " Mana potions\n";
     cout << P << " Perfect potions\n";
     cout << E << " Elixers of life\n";
+    if(H==0&&M==0&&P==0&&E==0){
+        Empty=true;
+    }
 }
 void Player::Use_Items()
 {
     Show_Items();
     char x;
-    cout << "Enter H M P or E to use potion.\n";
-    cin >> x;
-    while (x != 'H' && x != 'M' && x != 'P' && x != 'E')
-    {
+    if(Empty==true) cout<<"No Potion exists to be used\n";
+    else{
         cout << "Enter H M P or E to use potion.\n";
         cin >> x;
-    }
-    for (int i = 0; i < 10; i++)
-    {
-        if (x == 'M' && Potions[i] == 'M')
+        while (x != 'H' && x != 'M' && x != 'P' && x != 'E')
         {
-            if (Current_Mana == Max_Mana)
-            {
-                cout << "You have Max Mana\n";
-                break;
-            }
-            Current_Mana = Current_Mana + Max_Mana * Value[i] / 100;
-            if (Current_Mana > Max_Mana)
-                Current_Mana = Max_Mana;
-            cout << "Your Mana is restored\n";
+            cout << "Enter H M P or E to use potion.\n";
+            cin >> x;
         }
-        else if (x == 'H' && Potions[i] == 'H')
+        for (int i = 0; i < 10; i++)
         {
-            if (Current_HP == Max_HP)
+            if (x == 'M' && Potions[i] == 'M')
             {
-                cout << "You have Max HP\n";
-                break;
+                if (Current_Mana == Max_Mana)
+                {
+                    cout << "You have Max Mana\n";
+                    break;
+                }
+                Current_Mana = Current_Mana + Max_Mana * Value[i] / 100;
+                if (Current_Mana > Max_Mana)
+                    Current_Mana = Max_Mana;
+                cout << "Your Mana is restored\n";
             }
-            Current_HP = Current_HP + Max_HP * Value[i] / 100;
-            if (Current_HP > Max_HP)
-                Current_HP = Max_HP;
-        }
-        else if ((x == 'P' || x == 'E') && Potions[i] == 'P')
-        {
-            if (Current_Mana == Max_Mana && Current_HP == Max_HP)
+            else if (x == 'H' && Potions[i] == 'H')
             {
-                cout << "You have Full Mana and HP\n";
-                break;
+                if (Current_HP == Max_HP)
+                {
+                    cout << "You have Max HP\n";
+                    break;
+                }
+                Current_HP = Current_HP + Max_HP * Value[i] / 100;
+                if (Current_HP > Max_HP)
+                    Current_HP = Max_HP;
             }
-            Current_HP = Current_HP + Max_HP * Value[i] / 100;
-            if (Current_HP > Max_HP)
-                Current_HP = Max_HP;
-            Current_Mana = Current_Mana + Max_Mana * Value[i] / 100;
-            if (Current_Mana > Max_Mana)
-                Current_Mana = Max_Mana;
+            else if ((x == 'P' || x == 'E') && Potions[i] == 'P')
+            {
+                if (Current_Mana == Max_Mana && Current_HP == Max_HP)
+                {
+                    cout << "You have Full Mana and HP\n";
+                    break;
+                }
+                Current_HP = Current_HP + Max_HP * Value[i] / 100;
+                if (Current_HP > Max_HP)
+                    Current_HP = Max_HP;
+                Current_Mana = Current_Mana + Max_Mana * Value[i] / 100;
+                if (Current_Mana > Max_Mana)
+                    Current_Mana = Max_Mana;
+            }
         }
     }
 }
